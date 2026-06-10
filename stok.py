@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://konfuse.shop/the-wolf-t-shirt"
+url = "https://konfuse.shop/konfuse-the-anatolian-pars"
 TELEGRAM_TOKEN = "8433150649:AAFu00v4e3MR4f2DRckO4jZTZbOaBwA8G8E"
 TELEGRAM_CHAT_ID = "6031644473"
 
