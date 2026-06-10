@@ -1,0 +1,25 @@
+name: Stok Takip Botu
+
+on:
+  schedule:
+    # GitHub sunucusuna her 5 dakikada bir çalıştır emri veriyoruz
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # İstediğimizde elinizle de başlatabilmek için buton ekler
+
+jobs:
+  stok-kontrol:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodları sunucuya çek
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Gerekli Kütüphaneleri Yükle
+        run: pip install requests beautifulsoup4
+
+      - name: Botu Çalıştır
+        run: python bot.py
